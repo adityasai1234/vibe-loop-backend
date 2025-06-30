@@ -5,6 +5,7 @@
     "main": "app.js",
     "scripts": {
         "start": "node app.js",
+        "prestart": "npm prune --production && if [ ! -f .env ]; then echo '.env file missing!'; exit 1; fi",
         "dev": "nodemon app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
